@@ -1,0 +1,189 @@
+/* ---------- GENERAL STYLES ---------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	transition: .15s;
+	-webkit-transition: .15s;
+}
+
+a:hover {
+	opacity: 0.2;
+}
+
+@font-face {
+	font-family: "condensed";
+	src: url("fonts/SuisseIntlCond-Light.otf");
+}
+
+@font-face {
+	font-family: "italic";
+	src: url("fonts/SuisseIntlCond-LightItalic.otf");	
+}
+
+@font-face {
+	font-family: "regular";
+	src: url("fonts/SuisseIntl-Regular.otf");	
+}
+
+body {
+	padding: 1.5vw;
+	background-color: #989898;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- HOME PAGE STYLES ---------- */
+
+.wrapper {
+	/* need this to capture browser height */
+	min-height: 100%;
+}
+
+.content, .footer, h1 {
+	font-family: condensed;
+	font-size: 8.9vw;
+	letter-spacing: -.25vw;
+	line-height: 86%;
+}
+
+.italic {
+	font-family: italic;
+}
+
+.content {
+	min-height: 100%;
+	padding-bottom: 8.9vw;
+}
+
+.footer {
+	margin-top: -8.9vw;
+}
+
+/* ---------- PROJECT PAGE STYLES ---------- */
+
+
+/* ----- Header ----- */
+
+
+
+.header {
+	display: grid;
+	/*This 13/1 column thing is my weird hack for making the "X" stay to the right */
+	grid-template-columns: 13fr 1fr;
+	grid-template-areas:
+	"project-name exit-button"
+	;
+}
+
+.project-name {
+	padding-bottom: 1.5vw;
+}
+
+/* ----- Gallery ----- */
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.project-info {
+	font-family: regular;
+	font-size: 3.8vw;
+	letter-spacing: -.05vw;
+	line-height: 105%;
+	padding-top: .5vw;
+	padding-bottom: 2vw;
+}
+
+/* ----- Image Styling ----- */
+
+.project-image {
+	width: 100%;
+	padding-bottom: 1.5vw;
+}
+
+.project-image-left, .project-image-right {
+	width: 50%;
+	padding-bottom: 1.5vw;
+}
+
+.project-image-right {
+	justify-self: end;
+}
+
+.two-column-image-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1.5vw;
+}
+
+/* ----- Video Styling (Vimeo Only) ----- */
+
+.video-wrapper-bottom-margin {
+	padding-bottom: 1.5vw;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0px;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* ----- Bottom Nav ----- */
+
+.bottom-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"top next"
+	;
+	padding-top: .5vw;
+}
+
+.top-disabled {
+	opacity: 0.2;
+}
+
+.next {
+	justify-self: end;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+
+@media (max-width: 780px) {
+
+	.project-image-left, .project-image-right {
+		width: 100%;
+	}
+
+	.two-column-image-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+}
+
+
+
+
