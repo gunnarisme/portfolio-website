@@ -173,10 +173,11 @@ body {
 
 @media (max-width: 780px) {
 
+/*
 	.project-image-left, .project-image-right {
 		width: 100%;
 	}
-
+*/
 	.two-column-image-grid {
 		display: grid;
 		grid-template-columns: 1fr;
