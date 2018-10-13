@@ -80,7 +80,7 @@ body {
 .header {
 	display: grid;
 	/*This 13/1 column thing is my weird hack for making the "X" stay to the right */
-	grid-template-columns: 13fr 1fr;
+	grid-template-columns: 12fr 1fr;
 	grid-template-areas:
 	"project-name exit-button"
 	;
@@ -104,6 +104,15 @@ body {
 	line-height: 105%;
 	padding-top: .5vw;
 	padding-bottom: 2vw;
+}
+
+.project-content {
+	min-height: 100%;
+	padding-bottom: 26.7vw;
+}
+
+.project-footer {
+	margin-top: -26.7vw;
 }
 
 /* ----- Image Styling ----- */
