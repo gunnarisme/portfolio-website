@@ -43,6 +43,42 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* ---------- LOADER STYLES ---------- */
+
+.loader {
+	position: fixed;
+	background-color: #989898;
+	width: 100%;
+	height: 100%;
+}
+
+.loader.hidden {
+	animation: fadeOut 0s;
+	animation-fill-mode: forwards;
+}
+
+#loading {
+	float:left;
+}
+
+#dots{  
+  animation: typing 1s steps(4);
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+    0% {width: 0vw;}
+    100% {width: 8vw;}
+}
+
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
 /* ---------- HOME PAGE STYLES ---------- */
 
 .wrapper {
