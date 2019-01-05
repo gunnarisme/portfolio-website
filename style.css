@@ -43,6 +43,32 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* ---------- LOADER STYLES ---------- */
+
+.loader {
+	position: fixed;
+	background-color: #989898;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+#loading {
+	float:left;
+}
+
+#dots{  
+  	-webkit-animation: typing 1s steps(4);
+  	-webkit-animation-iteration-count: infinite;
+  	overflow: hidden;
+}
+
+@-webkit-keyframes typing {
+    0% {width: 0%;}
+    100% {width: 8%;}
+}
+
+
 /* ---------- HOME PAGE STYLES ---------- */
 
 .wrapper {
