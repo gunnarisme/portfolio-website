@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".loader").fadeOut(0);
+    $(".loader").delay(500).fadeOut(0);
 });
 
 $('.top').click(function(){ 
