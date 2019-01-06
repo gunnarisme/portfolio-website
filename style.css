@@ -52,13 +52,12 @@ body {
 	height: 100vh;
 }
 
-
 #loading {
 	float:left;
 }
 
 #dots{  
-  	-webkit-animation: typing 1s steps(4);
+  	-webkit-animation: typing .5s steps(4);
   	-webkit-animation-iteration-count: infinite;
   	overflow: hidden;
 }
