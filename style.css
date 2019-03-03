@@ -36,6 +36,11 @@ a:hover {
 	src: url("fonts/SuisseIntl-Regular.otf");	
 }
 
+@font-face {
+	font-family: "regular-italic";
+	src: url("fonts/SuisseIntl-RegularItalic.otf");	
+}
+
 body {
 	padding: 1.5vw;
 	background-color: #989898;
@@ -80,9 +85,9 @@ body {
 	font-size: 8.9vw;
 	letter-spacing: -.25vw;
 	line-height: 95%;
-	tab-size: 5;
-	-o-tab-size: 5;
-	-moz-tab-size: 5;
+	tab-size: 6;
+	-o-tab-size: 6;
+	-moz-tab-size: 6;
 }
 
 .italic {
@@ -118,12 +123,7 @@ body {
 	padding-bottom: 1.5vw;
 }
 
-/* ----- Gallery ----- */
-
-.gallery {
-	display: grid;
-	grid-template-columns: 1fr;
-}
+/* ----- Project Info ----- */
 
 .project-info {
 	font-family: regular;
@@ -132,6 +132,28 @@ body {
 	line-height: 105%;
 	padding-top: .5vw;
 	padding-bottom: 2vw;
+}
+
+.project-titles {
+	font-family: regular;
+	text-transform: uppercase;
+	font-size: 3.8vw;
+	letter-spacing: -.05vw;
+	line-height: 105%;
+	padding-top: .5vw;
+	padding-bottom: 3.4vw; /* This padding is for the spacing between the credits and the project info*/
+}
+
+.project-credits {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+/* ----- Image Gallery ----- */
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
 .project-content {
