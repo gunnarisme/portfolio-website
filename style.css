@@ -134,6 +134,10 @@ body {
 	padding-bottom: 2vw;
 }
 
+#misc-project-info {
+	padding-bottom: .5vw; /* This to account for the spacing between the "Misc. Work" description and the project title grid below it*/
+}
+
 .project-titles {
 	font-family: regular;
 	text-transform: uppercase;
@@ -147,6 +151,12 @@ body {
 .project-credits {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+.project-credits-misc {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 3.4vw;
 }
 
 /* ----- Image Gallery ----- */
