@@ -9,7 +9,7 @@ html, body {
 	height: 100%;
 }
 
-a {
+a, ul, p, h1 {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
@@ -43,7 +43,7 @@ a:hover {
 
 body {
 	padding: 1.5vw;
-	background-color: #989898;
+	background-color: #bcbcbc;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -52,7 +52,7 @@ body {
 
 .loader {
 	position: fixed;
-	background-color: #989898;
+	background-color: #bcbcbc;
 	width: 100vw;
 	height: 100vh;
 }
