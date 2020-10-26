@@ -9,8 +9,8 @@ html, body {
 	height: 100%;
 }
 
-a, ul, p, h1 {
-	color: black;
+a, p, h1 {
+	color: white;
 	text-decoration: none;
 	cursor: pointer;
 	transition: .15s;
@@ -18,242 +18,174 @@ a, ul, p, h1 {
 }
 
 a:hover {
-	opacity: 0.2;
+	opacity: 0.5;
 }
 
-@font-face {
-	font-family: "condensed";
-	src: url("fonts/SuisseIntlCond-Light.otf");
-}
-
-@font-face {
-	font-family: "italic";
-	src: url("fonts/SuisseIntlCond-LightItalic.otf");	
-}
 
 @font-face {
 	font-family: "regular";
-	src: url("fonts/SuisseIntl-Regular.otf");	
+	src: url("fonts/SuisseIntl-Regular.otf");
 }
 
 @font-face {
 	font-family: "regular-italic";
-	src: url("fonts/SuisseIntl-RegularItalic.otf");	
+	src: url("fonts/SuisseIntl-RegularItalic.otf");
 }
 
 body {
-	padding: 1.5vw;
-	background-color: #bcbcbc;
+	background-color: #000000;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------- LOADER STYLES ---------- */
 
-.loader {
-	position: fixed;
-	background-color: #bcbcbc;
-	width: 100vw;
-	height: 100vh;
-}
+/* ---------- LAYOUT STYLES ---------- */
 
-#loading {
-	float:left;
-}
-
-#dots{  
-  	-webkit-animation: typing .5s steps(4);
-  	-webkit-animation-iteration-count: infinite;
-  	overflow: hidden;
-}
-
-@-webkit-keyframes typing {
-    0% {width: 0%;}
-    100% {width: 8%;}
-}
-
-
-/* ---------- HOME PAGE STYLES ---------- */
 
 .wrapper {
-	/* need this to capture browser height */
 	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.content, .footer, h1, a {
-	font-family: condensed;
-	font-size: 8.9vw;
-	letter-spacing: -.25vw;
-	line-height: 100%;
-	tab-size: 6;
-	-o-tab-size: 6;
-	-moz-tab-size: 6;
+.top {
+	margin-left: 20px;
+	margin-top: 15px;
+	margin-right: 20px;
 }
 
-.italic {
-	font-family: italic;
+.bottom{
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.content {
-	min-height: 100%;
-	padding-bottom: 8.9vw;
-}
 
-.footer {
-	margin-top: -8.9vw;
-}
-
-/* ---------- PROJECT PAGE STYLES ---------- */
+/* ---------- TEXT AND IMAGE STYLES ---------- */
 
 
-/* ----- Header ----- */
-
-
-
-.header {
-	display: grid;
-	/*This 13/1 column thing is my weird hack for making the "X" stay to the right */
-	grid-template-columns: 12fr 1fr;
-	grid-template-areas:
-	"project-name exit-button"
-	;
-}
-
-.project-name {
-	padding-bottom: 1.5vw;
-}
-
-/* ----- Project Info ----- */
-
-.project-info {
+.big-text {
 	font-family: regular;
-	font-size: 3.8vw;
-	letter-spacing: -.05vw;
-	line-height: 105%;
-	padding-top: .5vw;
-	padding-bottom: 2vw;
+	font-size: 32px;
+	line-height: 115.7%;
+	max-width: 825px;
 }
 
-#misc-project-info {
-	padding-bottom: .5vw; /* This to account for the spacing between the "Misc. Work" description and the project title grid below it*/
+.big-super {
+	font-size: 18px;
+	font-weight: bold;
+	vertical-align: super;
+	line-height: 0;
 }
 
-.project-titles {
+/* underline styles, not entirely sure how this works... */
+
+a {
+	background-image: linear-gradient(to right, white 75%, white 75%);
+  	background-position: 0 1.15em;
+  	background-repeat: repeat-x;
+  	background-size: 8px 1.5px;
+
+}
+
+.footnotes {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	max-width: 380px;
+}
+
+.small-text {
 	font-family: regular;
-	text-transform: uppercase;
-	font-size: 3.8vw;
-	letter-spacing: -.05vw;
-	line-height: 105%;
-	padding-top: .5vw;
-	padding-bottom: 3.4vw; /* This padding is for the spacing between the credits and the project info*/
+	font-size: 14px;
+	line-height: 115.7%;
 }
 
-.project-credits {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.small-super {
+	font-size: 10px;
+	font-weight: bold;
+	vertical-align: super;
+	line-height: 0;
 }
 
-.project-credits-misc {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding-top: 3.4vw;
+.preview-img {
+	display: block;
+	height: 380px;
+	margin-top: 15px;
 }
 
-/* ----- Image Gallery ----- */
 
-.gallery {
-	display: grid;
-	grid-template-columns: 1fr;
-}
-
-.project-content {
-	min-height: 100%;
-	padding-bottom: 26.7vw;
-}
-
-.project-footer {
-	margin-top: -26.7vw;
-}
-
-/* ----- Image Styling ----- */
-
-.project-image {
-	width: 100%;
-	padding-bottom: 1.5vw;
-}
-
-.project-image-left, .project-image-right {
-	width: 50%;
-	padding-bottom: 1.5vw;
-}
-
-.project-image-right {
-	justify-self: end;
-}
-
-.two-column-image-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 1.5vw;
-}
-
-/* ----- Video Styling (Vimeo Only) ----- */
-
-.video-wrapper-bottom-margin {
-	padding-bottom: 1.5vw;
-}
-
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 0px;
-	height: 0;
-}
-
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-/* ----- Bottom Nav ----- */
-
-.bottom-nav {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-	"top next"
-	;
-	padding-top: .5vw;
-}
-
-.top-disabled {
-	opacity: 0.2;
-}
-
-.next {
-	justify-self: end;
-}
 
 /* ---------- MEDIA QUERIES ---------- */
 
 
-@media (max-width: 780px) {
+@media (max-width: 739px) {
 
-/*
-	.project-image-left, .project-image-right {
-		width: 100%;
+	.top {
+		margin-left: 12px;
+		margin-top: 10px;
+		margin-right: 12px;
 	}
-*/
-	.two-column-image-grid {
-		display: grid;
-		grid-template-columns: 1fr;
+
+	.bottom{
+		margin-bottom: 12px;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+
+
+	.big-text {
+		font-family: regular;
+		font-size: 20px;
+		line-height: 115.7%;
+	}
+
+	.big-super {
+		font-size: 11px;
+		font-weight: bold;
+		vertical-align: super;
+		line-height: 0;
+	}
+
+	a {
+		background-image: linear-gradient(to right, white 75%, white 75%);
+	  	background-position: 0 1.15em;
+	  	background-repeat: repeat-x;
+	  	background-size: 8px .5px;
+
+	}
+
+	.footnotes {
+		margin-top: 11px;
+		margin-bottom: 8px;
+	}
+
+	.small-text {
+		font-family: regular;
+		font-size: 12px;
+		line-height: 115.7%;
+	}
+
+	.small-super {
+		font-size: 9px;
+		font-weight: bold;
+		vertical-align: super;
+		line-height: 0;
+	}
+
+	.preview-img {
+		display: block;
+		height: 50vw;
+		margin-top: 10px;
 	}
 
 }
 
+@media (max-width: 599px) {
 
+	.footnotes {
+		max-width: none;
 
+	}
 
+}
