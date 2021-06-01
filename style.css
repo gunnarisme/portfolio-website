@@ -9,8 +9,8 @@ html, body {
 	height: 100%;
 }
 
-a, p, h1 {
-	color: white;
+a, p, h1, ul {
+	color: #000000;
 	text-decoration: none;
 	cursor: pointer;
 	transition: .15s;
@@ -33,7 +33,7 @@ a:hover {
 }
 
 body {
-	background-color: #000000;
+	background-color: #f7f7f7;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -68,8 +68,8 @@ body {
 
 .big-text {
 	font-family: regular;
-	font-size: 32px;
-	line-height: 115.7%;
+	font-size: 24px;
+	line-height: 120%;
 }
 
 .big-super {
@@ -82,11 +82,10 @@ body {
 /* underline styles, not entirely sure how this works... */
 
 a {
-	background-image: linear-gradient(to right, white 75%, white 75%);
-  	background-position: 0 1.15em;
+	background-image: linear-gradient(to right, black 75%, black 75%);
+  	background-position: 0 1.25em;
   	background-repeat: repeat-x;
-  	background-size: 8px 1.5px;
-
+  	background-size: 8px 1px;
 }
 
 .footnotes {
@@ -97,8 +96,13 @@ a {
 
 .small-text {
 	font-family: regular;
-	font-size: 14px;
-	line-height: 115.7%;
+	font-size: 12px;
+	line-height: 125%;
+}
+
+li {
+	float: left;
+	margin-right: 30px;
 }
 
 .small-super {
@@ -110,7 +114,7 @@ a {
 
 .preview-img {
 	display: block;
-	height: 380px;
+	height: 300px;
 	margin-top: 15px;
 }
 
@@ -147,23 +151,9 @@ a {
 		line-height: 0;
 	}
 
-	a {
-		background-image: linear-gradient(to right, white 75%, white 75%);
-	  	background-position: 0 1.15em;
-	  	background-repeat: repeat-x;
-	  	background-size: 8px .5px;
-
-	}
-
 	.footnotes {
 		margin-top: 12px;
 		margin-bottom: 24px;
-	}
-
-	.small-text {
-		font-family: regular;
-		font-size: 12px;
-		line-height: 115.7%;
 	}
 
 	.small-super {
@@ -176,7 +166,7 @@ a {
 	.preview-img {
 		display: block;
 		height: auto;
-		width: 47vw;
+		width: 40vw;
 		margin-top: 10px;
 	}
 
